@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+<style>
+    table,
+    tr,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        /* removes double borders */
+        padding: 6px;
+    }
+
+    button {
+        background-color: rgb(237, 56, 56);
+        color: white;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% for (const result of results) {%>
+            <tr>
+                <td>
+                    <%= result.id %>
+                </td>
+                <td>
+                    <%= result.email %>
+                </td>
+                <td>
+                    <%= result.username %>
+                </td>
+                <td>
+                    <form method="get" action="/user/<%= result.id %>/edit">
+                        <button style=" background-color: rgb(116, 56, 237);">Edit Username</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" action="/user/<%= result.id %>/delete">
+                        <button>Delete User</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% } %>
+    </table>
+    <br><br>
+    <div>
+        <form method="get" action="/user/new">
+            <button style="background-color: rgb(42, 10, 114);">Add New User</button>
+        </form>
+    </div>
+</body>
+
+</html>
