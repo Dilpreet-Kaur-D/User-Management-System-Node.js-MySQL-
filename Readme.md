@@ -49,12 +49,13 @@ DB_PASSWORD=your_mysql_password
 
 
 🗄️ Database Setup
+
 1️⃣ Create Database
 
 Login to MySQL and run:
-
 CREATE DATABASE dil;
 USE dil;
+
 2️⃣ Import Schema
 
 Run this command in terminal:
