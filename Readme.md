@@ -28,8 +28,6 @@ A simple backend project built using **Node.js**, **Express**, and **MySQL** tha
 ---
 
 
----
-
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the repository
